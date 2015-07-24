@@ -3,55 +3,143 @@
 <html lang="en">
 <head>
    <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
    <title>Project#1 | by NedalKouissi</title>
    <link rel="stylesheet" href="https://necolas.github.io/normalize.css/3.0.2/normalize.css">
    <link href='http://fonts.googleapis.com/css?family=Open+Sans:400,300,700,600,800' rel='stylesheet' type='text/css'>
-
+   
    <style>
    * {
       box-sizing: border-box;
    }
+      html {
+         height: 100vh;
+         width: 100%;
+         overflow-y: hidden;
+         display: -webkit-flex;
+         display: -ms-flexbox;
+         display: flex;
+         -webkit-justify-content: center;
+             -ms-flex-pack: center;
+                 justify-content: center;
+         -webkit-align-items: center;
+             -ms-flex-align: center;
+                 align-items: center;
+      }
       body {
+         width: 100%;
          text-align: center;
          font-family: 'Open Sans', sans-serif;
          color: white;
-         background: url('bg.jpg') center center fixed;
+         background: url('bg.jpg') center center fixed no-repeat;
          background-size: cover;
-         height: 100vh;
+         margin: 0 4%;
       }
 
       h1 {
          font-weight: 800;
-         font-size: 3em;
+         font-size: 3.5em;
          text-transform: uppercase;
+         background-color: black;
+         color: #FFF47B;
+         padding: 2%;
+         margin-bottom: 0;
       }
 
       p {
          font-weight: 600;
          font-size: 1.5em;
+         background-color: #FFF47B;
+         color: #333;
+         padding: 1%;
+         margin: 0;
+      }
+
+      .submitForm {
+         display: -webkit-flex;
+         display: -ms-flexbox;
+         display: flex;
+         margin-top: 0;
       }
 
       input[type="email"], input[type="submit"] {
-         padding: 1%;
+         padding: 4%;
+         border: none;
+         background-color: #333;
+         transition: all 0.8s;
+         outline: none;
+      }
+
+      input[type="email"]:hover {
+         background-color: black;
+         color: black;
+      }
+
+      input[type="submit"]:hover {
+         background-color: #333;
+         color: white;
       }
 
       input[type="email"] {
-         
+         -webkit-flex-grow: 3;
+             -ms-flex-positive: 3;
+                 flex-grow: 3;
+         background-color: #333;
       }
 
       input[type="submit"] {
-         
+         -webkit-flex-grow: 1;
+             -ms-flex-positive: 1;
+                 flex-grow: 1;
+         background-color: black;
+      }
+
+      @media (max-width:240px) {
+         body {
+            width: 100%;
+            overflow-x: hidden;
+            margin: 0;
+         }
+
+         h1 {
+            font-size: 2em;
+         }
+
+         p {
+
+         }
+
+         .submitForm {
+            -webkit-flex-direction: column;
+                -ms-flex-direction: column;
+                    flex-direction: column;
+         }
+
+         input[type="email"], input[type="submit"] {
+            padding: 10%;
+         }
+
+         ::-webkit-input-placeholder {
+            text-align: center;
+         }
+      }
+
+      @media (min-width:860px) {
+         body {
+            width: 70%;
+         }
       }
    </style>
 </head>
 
 <body>
-   <div class="wrapper">
-      <h1>Welcome to my freelance page</h1>
-      <p>Hi! i'm Nedal Kouissi, a full stack programmer, Say hello!</p>
+   <h1>Welcome to my freelance page</h1>
+   <p>Hi! i'm Nedal Kouissi, a full stack programmer, Say hello!</p>
+
+   <div class="submitForm">
       <input type="email" placeholder="Your email">
       <input type="submit">
    </div>
 </body>
 
-</html>
+</html>'
