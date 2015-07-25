@@ -4,6 +4,15 @@
    box-sizing: border-box;
 }
 
+/**
+
+   TODO:
+   - Add watermelow to images as linear gradient
+   - Make the website fully resonsive
+
+**/
+
+
 body {
    font-family: 'Open Sans', sans-serif;
    font-size: 1em;
@@ -19,11 +28,11 @@ header {
 }
 
 .main-header, article header {
-   transition: all 0.8s ease-in-out;
+   transition: all 1s ease-in-out;
 }
 
 .main-header:hover, article header:hover {
-   opacity: 0.9;
+   opacity: 0.8;
 }
 
 article header:hover {
@@ -266,7 +275,6 @@ footer div {
 }
 
 .About li {
-
    margin-bottom: 8%;
 }
 
@@ -278,6 +286,10 @@ footer div {
 .Contact li {
    margin-right: 10%;
    display: inline;
+}
+
+.Contact {
+   text-align: center;
 }
 
 .Contact a {
@@ -316,4 +328,53 @@ footer div {
 
 .cf {
     *zoom: 1;
+}
+
+
+/*==========  Media Queries  ==========*/
+@media (max-width:800px) {
+   .main-header {
+      display: none;
+   }
+
+   .default-post {
+      max-width: 98%;
+      margin: 4% auto 0;
+   }
+   
+   .default-post {
+      font-size: 0.9em;
+   }
+
+   .left {
+      width: 50%;
+   }
+
+   .right {
+      width: 50%;
+   }
+
+   footer {
+      flex-direction: column;
+   }
+
+   .About, .company {
+      display: none;
+   }
+
+   .Contact {
+      text-align: center;
+   }
+
+}
+
+@media (min-width:480px) and (max-width: 800px) {
+   .main-header {
+      display: block;
+      text-align: center;
+   }
+
+   .main-header nav {
+      display: none;
+   }
 }
