@@ -36,7 +36,8 @@ header {
 }
 
 article header:hover {
-   transform: scale(1.0125);
+   -webkit-transform: scale(1.0125);
+           transform: scale(1.0125);
 }
 
 nav {
@@ -56,9 +57,15 @@ nav ul {
    top: 0;
    bottom: 0;
    margin: 0% 0;
+   display: -webkit-flex;
+   display: -ms-flexbox;
    display: flex;
-   flex-direction: row;
-   align-items: center;
+   -webkit-flex-direction: row;
+       -ms-flex-direction: row;
+           flex-direction: row;
+   -webkit-align-items: center;
+       -ms-flex-align: center;
+           align-items: center;
 }
 
 nav li {
@@ -68,7 +75,8 @@ nav li {
 
 nav a {
    text-decoration: none;
-   transform: scale(1);
+   -webkit-transform: scale(1);
+           transform: scale(1);
    font-weight: 300;
    color: black;
    letter-spacing: 0.1em;
@@ -83,7 +91,8 @@ nav a span {
 
 nav a:hover {
    color: rgba(48,39,13,0.6);
-   transform: scale(0.8);
+   -webkit-transform: scale(0.8);
+           transform: scale(0.8);
 }
 
 .hero {
@@ -91,10 +100,18 @@ nav a:hover {
    background: url("imgs/bg1.jpg") fixed;
    background-position: center;
    background-size: cover;
+   display: -webkit-flex;
+   display: -ms-flexbox;
    display: flex;
-   align-items: center;
-   justify-content: center;
-   flex-direction: column;
+   -webkit-align-items: center;
+       -ms-flex-align: center;
+           align-items: center;
+   -webkit-justify-content: center;
+       -ms-flex-pack: center;
+           justify-content: center;
+   -webkit-flex-direction: column;
+       -ms-flex-direction: column;
+           flex-direction: column;
    color: white;
 }
 
@@ -197,11 +214,13 @@ nav a:hover {
 }
 
 .scalUp {
-   transform: scale(1);
+   -webkit-transform: scale(1);
+           transform: scale(1);
 }
 
 .scalUp:hover {
-   transform: scale(0.9);
+   -webkit-transform: scale(0.9);
+           transform: scale(0.9);
 }
 
 .default-post span a {
@@ -239,10 +258,18 @@ nav a:hover {
 /*==========  footer  ==========*/
 footer {
    width: 100%;
+   display: -webkit-flex;
+   display: -ms-flexbox;
    display: flex;
-   align-items: center;
-   justify-content: center;
-   flex-direction: row;
+   -webkit-align-items: center;
+       -ms-flex-align: center;
+           align-items: center;
+   -webkit-justify-content: center;
+       -ms-flex-pack: center;
+           justify-content: center;
+   -webkit-flex-direction: row;
+       -ms-flex-direction: row;
+           flex-direction: row;
    background-color: rgba(0,0,0,0.4);
    color: white;
    font-size: 1em;
@@ -355,7 +382,9 @@ footer div {
    }
 
    footer {
-      flex-direction: column;
+      -webkit-flex-direction: column;
+          -ms-flex-direction: column;
+              flex-direction: column;
    }
 
    .About, .company {
